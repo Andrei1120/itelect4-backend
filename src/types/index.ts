@@ -46,3 +46,33 @@ export type NewLostFoundItemBody = Pick<
   category?: string;
   status?: "lost" | "found" | "claimed";
 };
+
+// Course types
+export interface Course {
+  code: string;
+  title: string;
+  units: number;
+  semester: string;
+}
+
+export type CourseDoc = Pick<
+  Course,
+  "code" | "title" | "units" | "semester"
+>;
+
+// Submission types (for full compatibility with all lecture specifications)
+export interface Submission {
+  id: number;
+  studentId: number;
+  courseCode: string;
+  repoUrl: string;
+  submittedAt: Date;
+  score?: number;
+}
+
+export type SubmissionDoc = Omit<Submission, "id" | "studentId"> & {
+  studentId: Types.ObjectId;
+};
+
+export type NewSubmissionBody = Pick<Submission, "courseCode" | "repoUrl">;
+
