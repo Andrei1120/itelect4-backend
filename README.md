@@ -1,4 +1,7 @@
-# I‑Telec t4 – Backend (GT5)
+# I‑Telec t4 – Backend (GT6)
+
+[![CI](https://github.com/Andrei1120/itelect4-backend/actions/workflows/ci.yml/badge.svg)](https://github.com/Andrei1120/itelect4-backend/actions/workflows/ci.yml)
+
 
 ## Quick start
 1. **Copy** `.env.example` → `.env` in the **backend** folder and fill in:
